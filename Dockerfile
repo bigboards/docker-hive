@@ -21,6 +21,7 @@ ENV HADOOP_CONF_DIR /opt/hadoop/etc/hadoop
 ENV HDFS_CONF_DIR /opt/hadoop/etc/hadoop
 ENV YARN_CONF_DIR /opt/hadoop/etc/hadoop
 
+ENV HADOOP_USER_CLASSPATH_FIRST=true
 ENV HIVE_HOME /opt/hive
 ENV PATH ${PATH}:${HIVE_HOME}/bin
 
