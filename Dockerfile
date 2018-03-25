@@ -3,12 +3,13 @@ FROM bigboards/java7-butterfly-__arch__
 MAINTAINER bigboards <hello@bigboards.io>
 
 # hadoop
-RUN curl -s http://www.eu.apache.org/dist/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz | tar -xz -C /opt
-RUN cd /opt && ln -s ./hadoop-2.6.0 hadoop
+RUN curl -s http://www.eu.apache.org/dist/hadoop/common/hadoop-2.6.4/hadoop-2.6.4.tar.gz | tar -xz -C /opt
+RUN cd /opt && ln -s ./hadoop-2.6.4 hadoop
 
 # Download Hive
-RUN curl -s http://www.eu.apache.org/dist/hive/hive-1.2.1/apache-hive-1.2.1-bin.tar.gz | tar -xz -C /opt
-RUN cd /opt && ln -s ./apache-hive-1.2.1-bin hive
+RUN curl -s http://www.eu.apache.org/dist/hive/hive-2.3.2/apache-hive-2.3.2-bin.tar.gz | tar -xz -C /opt
+# RUN curl -s https://jdbc.postgresql.org/download/postgresql-9.4.1212.jar -O /opt/apache-hive-2.3.2-bin/lib/postgresql-jdbc.jar
+RUN cd /opt && ln -s ./apache-hive-2.3.2-bin hive
 
 # Set the environment variables
 ENV HADOOP_PREFIX /opt/hadoop
