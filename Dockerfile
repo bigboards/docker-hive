@@ -8,7 +8,7 @@ RUN cd /opt && ln -s ./hadoop-2.6.4 hadoop
 
 # Download Hive
 RUN curl -s http://archive.apache.org/dist/hive/hive-2.3.2/apache-hive-2.3.2-bin.tar.gz | tar -xz -C /opt
-# RUN curl -s https://jdbc.postgresql.org/download/postgresql-9.4.1212.jar -O /opt/apache-hive-2.3.2-bin/lib/postgresql-jdbc.jar
+RUN curl -s https://jdbc.postgresql.org/download/postgresql-9.4.1212.jar -O /opt/apache-hive-2.3.2-bin/lib/postgresql-jdbc.jar
 RUN cd /opt && ln -s ./apache-hive-2.3.2-bin hive
 
 # Set the environment variables
