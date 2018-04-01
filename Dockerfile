@@ -24,7 +24,7 @@ ENV YARN_CONF_DIR /opt/hadoop/etc/hadoop
 
 ENV HADOOP_USER_CLASSPATH_FIRST=true
 ENV HIVE_HOME /opt/hive
-ENV PATH ${PATH}:${HIVE_HOME}/bin
+ENV PATH ${PATH}:${HIVE_HOME}/bin:${HADOOP_COMMON_HOME}/bin
 
 COPY startup.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/startup.sh
